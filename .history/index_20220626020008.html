@@ -36,7 +36,7 @@
             <div id="hours" style="--clr:#ff2972;">00</div>
             <div id="minutes" style="--clr:#fee800;">00</div>
             <div id="seconds" style="--clr:#04fc43;">00</div>
-            <div id="ampm">PM</div>
+            <div id="ampm">AM</div>
         </div>
     </div>
     <script>
@@ -64,8 +64,6 @@
             let m = new Date().getMinutes();
             let s = new Date().getSeconds();
 
-            let am = h >= 12 ? "PM" : "AM";
-
             // convert 24hr clock to 12hr clock
             if(h > 12) {
                 h = h - 12
@@ -79,7 +77,6 @@
             hours.innerHTML = h;
             minutes.innerHTML = m;
             seconds.innerHTML = s;
-            ampm.innerHTML = am
         })
     </script>
 </body>
